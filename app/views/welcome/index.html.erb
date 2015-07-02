@@ -1,0 +1,18 @@
+<form class="checkout" action="https://rpm.demo.e-xact.com/payment" method="post"> 
+  <input name="x_login" value="WSP-TEST-FYchRQAapw" type="hidden"> 
+  <input name="x_fp_sequence" value="random stuff" type="hidden"> 
+  <input name="x_fp_timestamp" value="" type="hidden"> 
+  <input name="x_fp_hash" value="fa8299479b10fe62dc67f55fb17189ee" type="hidden"> 
+  <input name="x_show_form" value="PAYMENT_FORM" type="hidden"> 
+  <input value="Checkout with E­-xact.com" type="submit"> 
+
+  <!-- <input name="x_tax" value="26.59" type="hidden">  -->
+  <!-- <input name="x_line_item" value="10<|>1999 Cabernet Sauvignon, 0.7 l<|>1999 Cabernet Sauvignon, 0.7 l <|>10<|>19.95<|>YES" type="hidden">   -->
+ 
+  <input name="x_amount" value="1.23" type="hidden"> 
+</form>
+
+<!-- x_line_item -->
+<!-- Item ID<|>Item Name<|>Item Description<|>Item Quantity<|>Item Price<|>Item Taxable(YES/NO)<|> -->
+
+<%= react_component('Index', items: @items) %>
