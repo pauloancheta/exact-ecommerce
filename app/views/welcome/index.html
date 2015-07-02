@@ -1,0 +1,11 @@
+<form action="https://rpm.demo.e-xact.com/payment" method="post"> 
+  <input name="x_login" value="HCO-TEST-791" type="hidden"> 
+  <input name="x_amount" value="1.23" type="hidden"> 
+  <input name="x_fp_sequence" value="123456" type="hidden"> 
+  <input name="x_fp_timestamp" value="" type="hidden"> 
+  <input name="x_fp_hash" value="3bf1660e79060036f4efeea328da1c02" type="hidden"> 
+  <input name="x_show_form" value="PAYMENT_FORM" type="hidden"> 
+  <input value="Checkout with E­-xact.com" type="submit"> 
+</form>
+<!-- 
+HMAC-MD5  hash from the merchant’s transaction key and concatenation of the values for x_login, x_fp_sequence, x_fp_timestamp, x_amount, and (if given) x_currency_code – all separated by the ^ character. Note that even if x_currency_code is not present a ^ character is still added. The transaction key can be found in the "Security" tab when viewing the settings for a specific Payment Page. -->
