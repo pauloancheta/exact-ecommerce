@@ -1,8 +1,12 @@
-<%= @auth_num %> <br>
-<%= @ctr %> <br>
-<%= @merchant_name %> <br>
+<div class="container">
+  <div class="well">
+    <h2><%= @merchant_name %></h2>
+    Thank you for buying these awesome products! <br>
+    <%= link_to 'Continue Shopping', root_path, class: "btn btn-default" %> <br>
 
-<h2><%= @merchant_name %></h2>
-Thank you for buying these ridiculous products! <br>
+    <strong><%= @auth_num %> </strong>
 
-<%= debug @more_params %>
+    <br>
+    <%= @ctr %> <br>
+  </div>
+</div>

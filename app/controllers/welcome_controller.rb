@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
   end
 
   def receipt
+    @more_params = params
     @auth_num = params['Authorization_Num']
     @ctr = params['exact_ctr']
     @merchant_name = params['MerchantName']

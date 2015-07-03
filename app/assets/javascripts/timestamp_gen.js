@@ -13,6 +13,4 @@ $(document).ready(function(){
 
   var hash = CryptoJS.HmacMD5(hash_string, transaction_key);
   $('input[name="x_fp_hash"]').val(hash.toString(CryptoJS.enc.Hex) );
-
-  console.log(hash)
 });
