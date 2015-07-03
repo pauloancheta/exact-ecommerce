@@ -11,6 +11,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
+gem 'bootstrap-sass'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 
 group :development, :test do
