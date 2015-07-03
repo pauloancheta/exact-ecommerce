@@ -27,10 +27,11 @@ var Item = React.createClass({
     $('form.checkout').append('<input name="x_line_item" value="'+ val +'" type="hidden">')
     current_price = parseFloat($('input[name="x_amount"]').val())
     new_price = current_price + parseFloat(this.state.price)
-    $('input[name="x_amount"]').val(new_price)
+
+    $('input[name="x_amount"]').val(Math.round(new_price * 100) /100 )
 
 
-    $('.total-price').html(new_price)
+    $('.total-price').html(Math.round(new_price * 100) /100 )
     this.resetHash();
 
     str = this.state.name.replace(/\s/g, '');
@@ -42,9 +43,9 @@ var Item = React.createClass({
     $('input[value*="'+ this.state.name +'"]').remove();
     current_price = parseFloat($('input[name="x_amount"]').val())
     new_price = current_price - parseFloat(this.state.price)
-    $('input[name="x_amount"]').val(new_price)
+    $('input[name="x_amount"]').val(Math.round(new_price * 100) /100 )
 
-    $('.total-price').html(new_price)
+    $('.total-price').html(Math.round(new_price * 100) /100 )
     this.resetHash();
     this.setState({added: false})
 
