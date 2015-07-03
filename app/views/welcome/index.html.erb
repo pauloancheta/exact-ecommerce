@@ -1,18 +1,10 @@
-<form class="checkout" action="https://rpm.demo.e-xact.com/payment" method="post"> 
-  <input name="x_login" value="WSP-TEST-FYchRQAapw" type="hidden"> 
-  <input name="x_fp_sequence" value="random stuff" type="hidden"> 
-  <input name="x_fp_timestamp" value="" type="hidden"> 
-  <input name="x_fp_hash" value="fa8299479b10fe62dc67f55fb17189ee" type="hidden"> 
-  <input name="x_show_form" value="PAYMENT_FORM" type="hidden"> 
-  <input value="Checkout with E­-xact.com" type="submit"> 
-
-  <!-- <input name="x_tax" value="26.59" type="hidden">  -->
-  <!-- <input name="x_line_item" value="10<|>1999 Cabernet Sauvignon, 0.7 l<|>1999 Cabernet Sauvignon, 0.7 l <|>10<|>19.95<|>YES" type="hidden">   -->
- 
-  <input name="x_amount" value="1.23" type="hidden"> 
-</form>
-
-<!-- x_line_item -->
-<!-- Item ID<|>Item Name<|>Item Description<|>Item Quantity<|>Item Price<|>Item Taxable(YES/NO)<|> -->
-
-<%= react_component('Index', items: @items) %>
+<div class="container well">
+  Welcome to my e-commerce site. This is made with Ruby on Rails and React.js. The payments page goes directly to E-xact.<br>
+  This site also uses CryptoJS to generate new HMAC-md5 hash according to the values of needed to pass in to the E-xact system. If no activity is present for a while, the checkout button will be disabled. so be careful with that.<br>
+  After paying the items that you have bought, you will be directed to the receipt page where you can review your bought items.
+  <br><br>
+  happy shopping
+  <br>
+  Paulo A.
+</div>
+<%= react_component('Index', items: @items, image: @image) %>

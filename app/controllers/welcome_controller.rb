@@ -3,6 +3,7 @@ require 'openssl'
 class WelcomeController < ApplicationController
   def index
     @items = Item.all
+    @image = Faker::Avatar.image
   end
 
   def receipt

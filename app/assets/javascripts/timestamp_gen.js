@@ -10,10 +10,9 @@ $(document).ready(function(){
 
 
   var hash_string = x_login + "^" + x_fp_sequence + "^" + x_fp_timestamp + "^" + x_amount + "^"
-  console.log(hash_string)
 
   var hash = CryptoJS.HmacMD5(hash_string, transaction_key);
   $('input[name="x_fp_hash"]').val(hash.toString(CryptoJS.enc.Hex) );
 
-  console.log($('input[name="x_fp_hash"]').val())
+  console.log(hash)
 });
